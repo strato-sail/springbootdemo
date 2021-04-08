@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "mycar",
+      "type": "com.example.springbootdemo.bean.Car",
+      "sourceType": "com.example.springbootdemo.bean.Car"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mycar.broad",
+      "type": "java.lang.String",
+      "sourceType": "com.example.springbootdemo.bean.Car"
+    },
+    {
+      "name": "mycar.name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.springbootdemo.bean.Car"
+    }
+  ],
+  "hints": []
+}
