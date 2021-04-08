@@ -1,9 +1,8 @@
 package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.bean.Car;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,12 +12,12 @@ import java.util.Map;
 @Slf4j
 @RestController
 public class TheHello {
+    private Car car1;
+    private Car car2;
 
-    private Car car;
-
-    @Autowired
-    public TheHello(Car car) {
-        this.car = car;
+    public TheHello( Car car1,  Car car2) {
+        this.car1 = car1;
+        this.car2 = car2;
     }
 
     @GetMapping("/hello")
@@ -35,7 +34,7 @@ public class TheHello {
     @RequestMapping("/mycar")
     public Car car() {
         log.info("调用car");
-        return car;
+        return car1;
     }
 
 }
